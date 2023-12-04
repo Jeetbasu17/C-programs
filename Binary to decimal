@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function to convert binary to decimal
+
+int binaryToDecimal(int binaryNumber) 
+{
+    int decimalNumber = 0, base = 1, remainder;
+    
+    while (binaryNumber > 0)
+    {
+        remainder = binaryNumber % 10;
+        decimalNumber += remainder * base;
+        base *= 2;
+        binaryNumber /= 10;
+    }
+    
+    return decimalNumber;
+}
+
+int main() {
+    int binaryInput;
+    
+    printf("Enter a binary number: ");
+    scanf("%d", &binaryInput);
+    
+    int decimalResult = binaryToDecimal(binaryInput);
+    
+    printf("Decimal equivalent: %d\n", decimalResult);
+    
+    return 0;
+}
