@@ -1,3 +1,5 @@
+q. check whether a charecter is  vowel or consonant.
+
 #include <stdio.h>
 int main()
 {
